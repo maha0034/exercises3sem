@@ -1,0 +1,41 @@
+h1,
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.static {
+  margin-top: 15%;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 30px;
+}
+.text {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 20px;
+  justify-content: center;
+  gap: 10px;
+}
+p {
+  text-align: center;
+  font-size: x-large;
+  animation: fak 2s infinite;
+}
+
+@keyframes fak {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
