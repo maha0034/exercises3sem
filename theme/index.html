@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [data-theme="hawaii"] {
+            --header-bg-col: red;
+        }
+
+        [data-theme="dark"] {
+            --header-bg-col: black;
+        }
+
+        [data-theme="light"] {
+            --header-bg-col: beige;
+
+        }
+
+        header {
+            background-color: var(--header-bg-col);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        select {
+            margin-right: 10%;
+        }
+    </style>
+</head>
+<body data-theme="hawaii">
+    <header>
+        <h1>Theme switcher</h1>
+        <select name="theme" id="theme-selector">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="hawaii">Hawaii</option>
+        </select>
+    </header>
+    <main>
+        <p class="light">dette tema er light</p>
+        <p class="dark">dette tema er dark</p>
+        <p class="hawaii">dette tema er hawaii</p>
+    </main>
+</body>
+<script>
+    const selector = document.getElementById("theme-selector");
+
+    selector.addEventListener("change", function () {
+        document.body.setAttribute("data-theme", this.value);
+    });
+</script>
+
+</html>
